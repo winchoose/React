@@ -1,0 +1,110 @@
+.stepone {
+    display: flex;
+}
+.stepone h1 {
+    margin-top: 0px;
+    padding-left: 30px;
+}
+.choice {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+.choice img {
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6); /* 더 하얀 반투명 */
+    border-radius: 20px;
+    border: 1px solid rgba(150, 150, 150, 0.3);
+    transition: 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.choice img:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8); /* hover 시 더 진한 하양 */
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.state {
+    margin-left: 400px;
+    position: relative; /* 자식 img들의 absolute 기준 */
+    height: 600px; /* 충분한 공간 확보 */
+    width: 300px;
+}
+
+.state img {
+    position: absolute;
+    left: 0;
+    animation: dropIn 0.7s ease-out;
+}
+
+.default-animation {
+    top: 350px; /* 일반 이미지는 이 위치에 멈춤 */
+}
+
+.cup-animation {
+    top: 250px; /* 컵은 좀 더 위에서 멈추게 */
+    animation: cupDropIn 0.7s ease-out;
+}
+.next {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.next button {
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to bottom, #ffb6c1, #ff69b4); /* 연분홍 그라디언트 */
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 6px 0 #cc5c91;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.next button:hover {
+    background: linear-gradient(to bottom, #ff69b4, #ff1493);
+    box-shadow: 0 4px 0 #aa4a78;
+    transform: translateY(-2px);
+}
+
+.next button:active {
+    box-shadow: 0 2px 0 #aa4a78;
+    transform: translateY(2px);
+}
+
+@keyframes dropIn {
+    0% {
+        transform: translateY(-200vh);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(50px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes cupDropIn {
+    0% {
+        transform: translateY(-200vh);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(50px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
