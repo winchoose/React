@@ -40,16 +40,16 @@ const stepThree = ({ components, setComponents }) => {
     {components.icecream && (
         <img
             src={components.icecream}
-            className={`icecream-fixed ${components.base === 'cup.png' ? 'icecream-cup' : 'icecream-cone'}`}
+            className={`icecream-image ${components.base === 'cup.png' ? 'icecream-cup' : 'icecream-cone'}`}
         />
     )}
-    {components.syrup && (
-        <img
-            key={animationKey}
-            src={components.syrup}
-            className='syrup-image'
-        />
-    )}
+{components.syrup && (
+    <img
+        key={animationKey}
+        src={components.syrup}
+        className={`syrup-image ${components.base === 'cup.png' ? 'syrup-cup' : 'syrup-cone'}`}
+    />
+)}
 </div>
 <div className='next'>
             <button onClick={OnClick}> 토핑 선택 ➡</button>

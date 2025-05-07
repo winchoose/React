@@ -40,22 +40,22 @@ const stepFour = ({components, setComponents}) => {
     {components.icecream && (
         <img
             src={components.icecream}
-            className={`icecream-fixed ${components.base === 'cup.png' ? 'icecream-cup' : 'icecream-cone'}`}
+            className={`icecream-image ${components.base === 'cup.png' ? 'icecream-cup' : 'icecream-cone'}`}
         />
     )}
-    {components.syrup && (
-        <img
-            src={components.syrup}
-            className='syrup-image'
-        />
-    )}
-    {components.topping && (
-        <img
-            key={animationKey}
-            src={components.topping}
-            className='topping-image'
-        />
-    )}
+{components.syrup && (
+    <img
+        src={components.syrup}
+        className={`syrup-image ${components.base === 'cup.png' ? 'syrup-cup' : 'syrup-cone'}`}
+    />
+)}
+{components.topping && (
+    <img
+        key={animationKey}
+        src={components.topping}
+        className={`topping-image ${components.base === 'cup.png' ? 'topping-cup' : 'topping-cone'} ${components.topping === 'jelly.png' ? 'topping-jelly' : 'topping-small'}`}
+    />
+)}
 </div>
 <div className='next'>
             <button onClick={OnClick}>완성 나만의 아이스크림! ➡</button>
