@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Home from '../page/home'
 import StepOne from '../page/stepOne'
 import StepTwo from '../page/stepTwo'
+import StepThree from '../page/stepThree'
+import StepFour from '../page/stepFour'
 
 const mockData = {
     base: "",
@@ -13,13 +15,15 @@ const mockData = {
 
 const AppRoutes = () => {
 
-    const [components, setcomponents] = useState(mockData);
+    const [components, setComponents] = useState(mockData);
 
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/stepOne" element={<StepOne components={components} setComponents={setcomponents}/>} />
-            <Route path="/stepTwo" element={<StepTwo />} />
+            <Route path="/stepOne" element={<StepOne components={components} setComponents={setComponents}/>} />
+            <Route path="/stepTwo" element={<StepTwo components={components} setComponents={setComponents}/>} />
+            <Route path="/stepThree" element={<StepThree components={components} setComponents={setComponents}/>} />
+            <Route path="/stepFour" element={<StepFour components={components} setComponents={setComponents}/>} />
         </Routes>
     );
 }; export default AppRoutes;
