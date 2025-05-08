@@ -38,7 +38,6 @@ function reducer(state, action){
   }
 }
 
-
 function App() {
 
   const [todos, dispatch] = useReducer(reducer, mockData);
@@ -70,7 +69,6 @@ function App() {
     })
   }
   
-
 
   return (
     <div className='App'>
