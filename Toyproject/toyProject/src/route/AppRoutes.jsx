@@ -5,6 +5,7 @@ import StepOne from '../page/stepOne'
 import StepTwo from '../page/stepTwo'
 import StepThree from '../page/stepThree'
 import StepFour from '../page/stepFour'
+import Completion from '../page/Completion'
 
 const mockData = {
     base: "",
@@ -24,6 +25,7 @@ const AppRoutes = () => {
             <Route path="/stepTwo" element={<StepTwo components={components} setComponents={setComponents}/>} />
             <Route path="/stepThree" element={<StepThree components={components} setComponents={setComponents}/>} />
             <Route path="/stepFour" element={<StepFour components={components} setComponents={setComponents}/>} />
+            <Route path="/completion" element={<Completion components={components} setComponents={setComponents}/>} />
         </Routes>
     );
 }; export default AppRoutes;
