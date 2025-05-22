@@ -11,9 +11,10 @@ const champions = Object.values(championData.data).map((champ) => ({
 }));
 
 
-const Champion = () => {
+const Champion = ({onChampionClick}) => {
 
     const handleChampionClick = (champion) => {
+        onChampionClick(champion)
 };
 
     return (

@@ -63,6 +63,7 @@ export const goldButton = style({
     '&:hover': {
       transform: 'scale(1.1) translateY(-2px)',
       borderRadius: '16px',
+      boxShadow: '0 0 15px rgba(255, 215, 0, 0.5)',
     },
   },
 });
